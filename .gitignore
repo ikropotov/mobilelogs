@@ -17,6 +17,4 @@
 .idea/
 *.iml
 
-vendor/
-
 logs/*.log
