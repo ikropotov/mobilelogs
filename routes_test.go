@@ -1,4 +1,4 @@
-package routes
+package main
 
 import (
 	"net/http"
@@ -6,6 +6,7 @@ import (
 	"testing"
 	"strings"
 	"encoding/json"
+	"github.com/ikropotov/mobilelogs/routes"
 )
 
 
@@ -13,7 +14,7 @@ import (
 
 func TestProcessLogs(t *testing.T) {
 
-	r := CreateRouter()
+	r := routes.CreateRouter()
 
 	mapD := map[string]string{"id": "id1", "password": "123", "log": "Test Log"}
 	mapB, _ := json.Marshal(mapD)

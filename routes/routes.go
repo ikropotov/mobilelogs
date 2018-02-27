@@ -43,13 +43,13 @@ func processLogs(c *gin.Context) {
 
 func saveLogs(log Log) error {
 	logStream := []byte(log.Log)
-	_, err := os.Create("../logs/" + log.DeviceId + ".log")
+	_, err := os.Create("./logs/" + log.DeviceId + ".log")
 
 	if err != nil {
 		return err
 	}
 
-	err = ioutil.WriteFile("../logs/" + log.DeviceId + ".log", logStream, 0644)
+	err = ioutil.WriteFile("./logs/" + log.DeviceId + ".log", logStream, 0644)
 
 	if err != nil {
 		return err
